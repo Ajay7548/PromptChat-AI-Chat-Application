@@ -1,0 +1,108 @@
+.result-node {
+  min-width: 280px;
+  max-width: 340px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-text-muted);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 0;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.result-node--success {
+  border-left-color: var(--color-success);
+}
+
+.result-node--loading {
+  border-left-color: var(--color-primary);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.result-node--error {
+  border-left-color: var(--color-error);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: var(--shadow-md); }
+  50% { box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2); }
+}
+
+.result-node__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+}
+
+.result-node--success .result-node__header {
+  color: var(--color-success);
+}
+
+.result-node--loading .result-node__header {
+  color: var(--color-primary);
+}
+
+.result-node--error .result-node__header {
+  color: var(--color-error);
+}
+
+.result-node__body {
+  padding: 4px 16px 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.result-node__loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.result-node__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.result-node__placeholder {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+.result-node__error {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+.result-node__handle {
+  width: 10px;
+  height: 10px;
+  background: var(--color-text-muted);
+  border: 2px solid var(--color-surface);
+}
+
+.result-node--success .result-node__handle {
+  background: var(--color-success);
+}
+
+.result-node--loading .result-node__handle {
+  background: var(--color-primary);
+}
