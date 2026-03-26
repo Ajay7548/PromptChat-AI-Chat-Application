@@ -11,7 +11,7 @@ const ConsoleLogger = require('./logger/ConsoleLogger');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: env.CLIENT_ORIGIN }));
+app.use(cors({ origin: true,credentials:true}));
 app.use(express.json());
 app.use(createRequestLogger(new ConsoleLogger()));
 
