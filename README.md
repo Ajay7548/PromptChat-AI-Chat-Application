@@ -2,6 +2,8 @@
 
 A full-stack MERN application where users type a prompt into a React Flow node, click **Run Flow**, and see the AI-generated response in a connected result node. Conversations can be saved to MongoDB.
 
+Live Preview : [Live](https://chat-project-theta.vercel.app/)
+
 ## Tech Stack
 
 - **Frontend:** React (Vite) + React Flow (`@xyflow/react`)
